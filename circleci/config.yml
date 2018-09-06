@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red233\green233\blue220;
+\red204\green195\blue98;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c92941\c92941\c89020;
+\cssrgb\c83922\c80000\c45882;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx5353\pardeftab720\sl380\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 version: 2\
+\strokec5 jobs\strokec4 :\
+  \strokec5 build\strokec4 :\
+    \strokec5 docker\strokec4 :\
+      - \strokec5 image\strokec4 : debian:stretch\
+    \strokec5 steps\strokec4 :\
+      - checkout\
+      - \strokec5 run\strokec4 :\
+          \strokec5 name\strokec4 : Greeting\
+          \strokec5 command\strokec4 : echo Hello, world.\
+      - \strokec5 run\strokec4 :\
+          \strokec5 name\strokec4 : Print the Current Time\
+          \strokec5 command\strokec4 : date\
+}
