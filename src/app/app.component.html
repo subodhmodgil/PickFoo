@@ -1,2 +1,8 @@
-<h1>Angular</h1>
-<app-foods></app-foods>
+
+<ul>
+    <button class="btnAdd" (click)="onAdd()">ADD</button>
+    <li *ngFor="let cadet of cadets; index as i">
+       {{i}} - {{cadet.name}}
+       <button class="btnRmv" (click)="onRemove(cadet)">Remove</button>
+    </li>
+</ul>

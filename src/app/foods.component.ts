@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FoodsService } from './foods.service';
+import { SummaryPipe } from './summary.pipe';
 
 @Component({
     selector: 'app-foods',
@@ -7,18 +8,14 @@ import { FoodsService } from './foods.service';
     <div>
         <h2>{{ title }}</h2>
         <div>
-            <img [src]="imageUrl" width="360" height="100"/>
+            <img [src]="imageUrl" width="340" height="100" margin-bottom="20"/>
         </div>
         <ul>
             <li *ngFor="let course of courses">
                 {{ course }}
             </li>
         </ul>
-        <table>
-            <tr>
-                <td [attr.colspan]="colSpan"></td>
-            </tr>
-        </table>
+       {{ text | summary: 20 }}
     </div>
     `
 })
@@ -26,9 +23,9 @@ import { FoodsService } from './foods.service';
 export class FoodsComponent {
     title = 'List of courses';
     imageUrl = 'http://lorempixel.com/400/200';
-    colSpan = 2;
     courses;
-
+    email = 'subodh@gmail.com';
+    text = 'All of above is list of Healthy Fruits';
     constructor(service: FoodsService) {
         this.courses = service.getFood();
      }
